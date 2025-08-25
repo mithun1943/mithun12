@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: skyblue;
+  overflow: hidden;
+  position: relative;
+}
+
+.balloon {
+  width: 60px;
+  height: 80px;
+  background: red;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: drop 4s ease-in-out forwards;
+  box-shadow: inset -5px -5px rgba(0,0,0,0.1);
+}
+
+.string {
+  width: 2px;
+  height: 40px;
+  background: #555;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes drop {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: calc(100vh - 120px);
+  }
+}
